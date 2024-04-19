@@ -1,0 +1,45 @@
+/* Custom Styles */
+body {
+  background-color: #edf2f4;
+}
+
+.card {
+  background-color: #8d99ae;
+}
+
+.card-title {
+  color: #2b2d42;
+}
+
+.card-text {
+  color: #2b2d42;
+}
+
+.navbar {
+  background-color: #2b2d42 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #edf2f4 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ef233c !important;
+}
+
+.jumbotron {
+  background-color: #2b2d42;
+}
+
+.display-4 {
+  color: #ef233c;
+}
+
+.lead {
+color: #edf2f4;
+}
+
+footer {
+    margin-bottom: 0;
+  background-color: #2b2d42;
+}

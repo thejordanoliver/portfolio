@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Jordan Oliver</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4">My Portfolio</h1>
+        <p class="lead">Showcasing my projects from this semester</p>
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+
+      <!-- Project Cards -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img
+              src="./img/Project1.gif"
+              class="card-img-top"
+              alt="Project 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Quiz App</h5>
+              <p class="card-text">
+                A quiz app to test your knowledge on the NBA.
+              </p>
+              <p class="card-text">
+                Skills/Technologies: HTML, CSS, JavaScript, React
+              </p>
+              <p class="card-text">
+                I had a tough time trying to fix the multiple-answer question. I
+                was able to find the error in the if else if statement. For my
+                design I wanted it to be simplistic and easy to follow for
+                users.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img
+              src="./img/Project2.gif"
+              class="card-img-top"
+              alt="Project 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Exercise App</h5>
+              <p class="card-text">
+                A exercise app allowing you to track your fitness progress.
+              </p>
+              <p class="card-text">
+                Skills/Technologies: HTML, CSS, JavaScript, React
+              </p>
+              <p class="card-text">
+                I wasnt able to import my components. I had to correct the file
+                path name in my code so it would appear. For the design I kept
+                it basic, focusing more on the functionality than the design.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img
+              src="./img/Project3.gif"
+              class="card-img-top"
+              alt="Project 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Todo App</h5>
+              <p class="card-text">
+                Todo list app allowing you to add and filter your tasks
+              </p>
+              <p class="card-text">
+                Skills/Technologies: HTML, CSS, JavaScript, React
+              </p>
+              <p class="card-text">
+                It was difficult tryting fix the problem with filtering. I had
+                to add in the index and key as parameters to resolve the issue.
+                This project aimed for a minimalist and intuitive design to
+                enhance usability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Projects Section -->
+    <section id="design-projects" class="container">
+      <h2 class="text-center mb-4">Design Projects</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./img/Design1.png" class="card-img-top" alt="Project 1" />
+            <div class="card-body">
+              <h5 class="card-title">Weather App Design</h5>
+              <p class="card-text">The app provides a accurate and up-to-date forecasts tailored to your location and preferences. </p>
+              <p class="card-text">Skills/Technologies: Figma</p>
+              <p class="card-text"> With its sleek design and comprehensive features, it makes checking the weather a breeze.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./img/Design2.png" class="card-img-top" alt="Project 1" />
+            <div class="card-body">
+              <h5 class="card-title">ToDo List App Design</h5>
+              <p class="card-text">A user-friendly todo list app designed to simplify your life and boost productivity. </p>
+              <p class="card-text">Skills/Technologies: Figma</p>
+              <p class="card-text"> I envisioned a clean and intuitive interface, making it effortless to manage your tasks and stay organized.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="./img/Design3.png" class="card-img-top" alt="Project 1" />
+            <div class="card-body">
+              <h5 class="card-title">Flashcard App Design</h5>
+              <p class="card-text">
+                A modern and intuitive flashcard app designed to streamline your
+                study sessions.
+              </p>
+              <p class="card-text">Skills/Technologies: Figma</p>
+              <p class="card-text">
+                Design Decisions: I was going for a clean and minimalist
+                interface, to helps users focus on their learning without
+                distractions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Jordan Oliver</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
