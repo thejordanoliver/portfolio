@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap");
 
 :root {
   --color-page: #f7f5f0;
@@ -16,8 +16,8 @@
   --color-accent-dark: #c9a800;
   --max-width: 1200px;
   --header-height: 80px;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
 }
 
 html[data-theme="dark"] {
@@ -54,7 +54,9 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   line-height: 1.7;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 body.nav-open {
@@ -178,7 +180,7 @@ button {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 4px;
   left: 16px;
@@ -244,7 +246,9 @@ html[data-theme="dark"] .theme-toggle {
   line-height: 1;
   pointer-events: none;
   transform: translate(0, -50%);
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease,
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.2s ease,
     color 0.2s ease;
 }
 
@@ -276,7 +280,9 @@ html[data-theme="dark"] .theme-toggle-icon {
   height: 1.5px;
   display: block;
   background: var(--color-text);
-  transition: transform 0.22s ease, opacity 0.16s ease;
+  transition:
+    transform 0.22s ease,
+    opacity 0.16s ease;
 }
 
 .menu-toggle.is-active .menu-line:nth-child(1) {
@@ -354,7 +360,9 @@ html[data-theme="dark"] .theme-toggle-icon {
 }
 
 @keyframes cursorBlink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-text {
@@ -405,7 +413,10 @@ html[data-theme="dark"] .theme-toggle-icon {
   color: var(--color-text);
   line-height: 1;
   text-decoration: none;
-  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .social-link:hover,
@@ -450,7 +461,10 @@ html[data-theme="dark"] .theme-toggle-icon {
   letter-spacing: 0.3px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .hero-button:hover {
@@ -655,7 +669,9 @@ html[data-theme="dark"] .theme-toggle-icon {
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   padding: 0;
-  transition: background-color 0.18s ease, width 0.18s ease;
+  transition:
+    background-color 0.18s ease,
+    width 0.18s ease;
 }
 
 .slideshow-dot:hover,
@@ -898,7 +914,9 @@ html[data-theme="dark"] .project-meta-label {
   margin-bottom: clamp(32px, 5vw, 56px);
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 2px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .back-link:hover {
@@ -931,7 +949,7 @@ html[data-theme="dark"] .project-meta-label {
 }
 
 html[data-theme="dark"] .contact-image {
-  filter: invert(1) opacity(0.7);
+  filter: opacity(0.7);
 }
 
 .contact-list {
@@ -992,7 +1010,9 @@ html[data-theme="dark"] .contact-image {
   cursor: pointer;
   color: var(--color-faint);
   font-size: 16px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .copy-button:hover {
@@ -1054,7 +1074,9 @@ html[data-theme="dark"] .contact-image {
   opacity: 0;
   pointer-events: none;
   transform: translateY(10px);
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
 }
 
 .toast.show {
@@ -1138,7 +1160,10 @@ html[data-theme="dark"] .contact-image {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-8px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
   }
 
   .nav-menu.is-active {
