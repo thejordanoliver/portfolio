@@ -83,7 +83,7 @@
       themeButton.setAttribute("aria-pressed", String(isDark));
       themeButton.setAttribute(
         "aria-label",
-        isDark ? "Switch to light mode" : "Switch to dark mode"
+        isDark ? "Switch to light mode" : "Switch to dark mode",
       );
     }
   }
@@ -137,7 +137,7 @@
     menuButton.setAttribute("aria-expanded", String(isOpen));
     menuButton.setAttribute(
       "aria-label",
-      isOpen ? "Close navigation menu" : "Open navigation menu"
+      isOpen ? "Close navigation menu" : "Open navigation menu",
     );
 
     if (isOpen) {
@@ -184,9 +184,12 @@
     });
 
     const bottomReached =
-      window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 4;
 
-    setActiveNavLink(bottomReached ? pageSections.at(-1).id : currentSection.id);
+    setActiveNavLink(
+      bottomReached ? pageSections.at(-1).id : currentSection.id,
+    );
   }
 
   function updateHeaderOnScroll() {
@@ -199,7 +202,7 @@
     siteHeader.classList.toggle("is-scrolled", currentScrollY > 12);
     siteHeader.classList.toggle(
       "is-hidden",
-      isScrollingDown && !isNearTop && !isMenuOpen()
+      isScrollingDown && !isNearTop && !isMenuOpen(),
     );
 
     lastScrollY = currentScrollY;
@@ -221,7 +224,8 @@
     applyTheme(savedTheme || html.dataset.theme || getSystemTheme());
 
     themeButton?.addEventListener("click", () => {
-      const nextTheme = getCurrentTheme() === DARK_THEME ? LIGHT_THEME : DARK_THEME;
+      const nextTheme =
+        getCurrentTheme() === DARK_THEME ? LIGHT_THEME : DARK_THEME;
       safeStorage.set(THEME_KEY, nextTheme);
       applyTheme(nextTheme);
       showToast(`${nextTheme === DARK_THEME ? "Dark" : "Light"} mode enabled.`);
@@ -247,13 +251,17 @@
   }
 
   function initResumeDownload() {
-    document.getElementById("downloadResumeBtn")?.addEventListener("click", () => {
-      showToast("Resume download started.");
-    });
+    document
+      .getElementById("downloadResumeBtn")
+      ?.addEventListener("click", () => {
+        showToast("Resume download started.");
+      });
   }
 
   function initProjectSlideshows() {
-    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const reduceMotionQuery = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
 
     document.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
       const slides = [...slideshow.querySelectorAll("[data-slide]")];
@@ -261,7 +269,11 @@
 
       if (!slides.length) return;
 
-      if (dotsContainer && !dotsContainer.children.length && slides.length > 1) {
+      if (
+        dotsContainer &&
+        !dotsContainer.children.length &&
+        slides.length > 1
+      ) {
         slides.forEach((_, index) => {
           const dot = document.createElement("button");
           dot.className = "slideshow-dot";
@@ -275,7 +287,7 @@
       const dots = [...slideshow.querySelectorAll("[data-slide-dot]")];
       const hasMultipleSlides = slides.length > 1;
       let activeIndex = slides.findIndex((slide) =>
-        slide.classList.contains("is-active")
+        slide.classList.contains("is-active"),
       );
       let autoplayTimer;
 
@@ -403,11 +415,13 @@
       }
     });
 
-    window.matchMedia("(min-width: 861px)").addEventListener("change", (event) => {
-      if (event.matches) {
-        setMenuState(false);
-      }
-    });
+    window
+      .matchMedia("(min-width: 861px)")
+      .addEventListener("change", (event) => {
+        if (event.matches) {
+          setMenuState(false);
+        }
+      });
   }
 
   function initNavigationState() {
@@ -421,8 +435,10 @@
     const target = document.querySelector(".multiText");
     if (!target) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const phrases = ["UI/UX Designer", "Full-Stack Developer"];
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const phrases = ["Designer", "Developer"];
 
     if (reduceMotion) {
       target.textContent = phrases[0];
